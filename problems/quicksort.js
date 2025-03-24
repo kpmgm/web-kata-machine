@@ -34,7 +34,7 @@ const quicksort = {
   ],
   hints: [
       "Hint 1: Quicksort is a divide-and-conquer algorithm that works by selecting a pivot element and partitioning the array around it.",
-      "Hint 2: The basic steps are: choose a pivot, place elements less than the pivot to the left, place elements greater than the pivot to the right, then recursively apply the same process to the subarrays.",
+      "Hint 2: The basic steps are... choose a pivot, place elements less than the pivot to the left, place elements greater than the pivot to the right, then recursively apply the same process to the subarrays.",
       "Hint 3: A common approach is to select the last element as the pivot."
   ]
 };
