@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Practice App</title>
+  <!-- Add CodeMirror for syntax highlighting and indentation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/eclipse.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/matchbrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/closebrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/comment/comment.min.js"></script>
+  <!-- Load our JavaScript files -->
+  <script type="module" src="utils.js"></script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <h1>DSA Practice App</h1>
+  <div>
+    <div class="problem-header">
+      <div>
+        <label for="problem-select">Select Problem:</label>
+        <select id="problem-select">
+          <option class="opt-ds" value="linkedlist">*Linked List</option>
+          <option value="quicksort">Quicksort</option>
+          <option value="binarysearch">Binary Search</option>
+          <option value="mergesort">Merge Sort</option>
+          <option value="bfs">Breadth-First Search</option>
+          <option value="dfs">Depth-First Search</option>
+        </select>
+      </div>
+      <button class="theme-toggle" id="theme-toggle">☀️</button>
+    </div>
+  </div>
+  <div id="problem-container">
+    <div class="problem-header">
+      <h2 id="problem-title">Linked List</h2>
+    </div>
+    <div class="description" id="problem-description">
+      Implement a singly linked list data structure with the following methods:
+      append(val), prepend(val), delete(val), find(val), and toArray().
+    </div>
+    <div class="hints-container">
+      <button class="hints-button" id="hints-toggle">Show Hints</button>
+    </div>
+    <div class="hints" id="problem-hints">
+      <p class="hint" id="hint-1"><strong>Hint 1:</strong> A LinkedList node should contain a value and a reference to the next node.</p>
+      <p class="hint" id="hint-2"><strong>Hint 2:</strong> The LinkedList class should maintain references to the head and optionally the tail of the list.</p>
+      <p class="hint" id="hint-3"><strong>Hint 3:</strong> When deleting a node, you'll need to update the 'next' pointer of the previous node.</p>
+    </div>
+    <div class="code-container">
+      <textarea id="code-editor"></textarea>
+    </div>
+    <button id="run-button">Run Tests</button>
+    <div id="results">
+      <h3>Test Results</h3>
+      <p>Click "Run Tests" to see results.</p>
+    </div>
+  </div>
+</body>
+</html>

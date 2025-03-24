@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --header-color: #bbb;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+    --card-bg: #252525;
+    --border-color: #444;
+    --input-bg: #333;
+    --success-bg: #253326;
+    --success-text: #4CAF50;
+    --error-bg: #3d2222;
+    --error-text: #e57373;
+    --hint-bg: #253326;
+}
+
+.light-theme {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --header-color: #333;
+    --accent-color: #4CAF50;
+    --accent-hover: #45a049;
+    --card-bg: #fff;
+    --border-color: #ccc;
+    --input-bg: #fff;
+    --success-bg: #dff0d8;
+    --success-text: #3c763d;
+    --error-bg: #f2dede;
+    --error-text: #a94442;
+    --hint-bg: #f0f8e6;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+    color: var(--header-color);
+}
+
+select, button {
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+.code-container {
+    position: relative;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.CodeMirror {
+    height: 350px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--card-bg);
+}
+
+.test-result {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.test-pass {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+.test-fail {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+}
+
+.description {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border-left: 3px solid var(--accent-color);
+}
+
+.problem-header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.hints-container {
+    margin: 15px 0;
+    text-align: right;
+}
+
+.hints-button {
+    background-color: var(--accent-color);
+    width: 150px;
+}
+
+.hints-button:hover {
+    background-color: var(--accent-hover);
+}
+
+.hints {
+    display: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--hint-bg);
+    border-left: 3px solid var(--accent-color);
+}
+
+.hint {
+    display: none;
+}
+/* 
+.opt-ds {
+  background-color: #ccc;
+  color: black;
+} */
